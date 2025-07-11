@@ -93,19 +93,36 @@
    <img src="Flaire/2.svg">
   <img src="Flaire/3.svg">
     
+<section style="direction: rtl; text-align: right; font-family: 'Tajawal', sans-serif; background: #fff; padding: 2em;">
+  <div style="border: 2px dashed #2196f3; padding: 2em; border-radius: 15px; max-width: 700px; margin: auto;">
+    <h2 style="text-align: center; color: #333;">عرض خاص!</h2>
+    <p style="text-align: center; font-size: 1.2em; color: green;">
+      +2 عطور <span style="color: #2196f3;">الثالث مجاناً</span>
+    </p>
+    <h1 style="text-align: center; color: #28a745; font-size: 3em;">199 د.م</h1>
+
+   <form action="https://getform.io/f/YOUR-FORM-ENDPOINT" method="POST">
+      <div style="display: flex; gap: 1em; flex-wrap: wrap;">
+        <input type="text" name="العطر الأول" placeholder="العطر الأول" required style="flex: 1; padding: 1em; border: 1px solid #ccc; border-radius: 8px;" />
+        <input type="text" name="العطر الثاني" placeholder="العطر الثاني" required style="flex: 1; padding: 1em; border: 1px solid #ccc; border-radius: 8px;" />
+        <input type="text" name="العطر الثالث" placeholder="العطر الثالث" required style="flex: 1; padding: 1em; border: 1px solid #ccc; border-radius: 8px;" />
+        <input type="text" name="الاسم الكامل" placeholder="الاسم الكامل" required style="flex: 1 1 100%; padding: 1em; border: 1px solid #ccc; border-radius: 8px;" />
+        <input type="text" name="رقم الهاتف" placeholder="رقم الهاتف" required style="flex: 1; padding: 1em; border: 1px solid #ccc; border-radius: 8px;" />
+        <input type="text" name="المدينة" placeholder="المدينة" required style="flex: 1; padding: 1em; border: 1px solid #ccc; border-radius: 8px;" />
+        <input type="text" name="العنوان الكامل" placeholder="العنوان الكامل" required style="flex: 1 1 100%; padding: 1em; border: 1px solid #ccc; border-radius: 8px;" />
+      </div>
+
+      <!-- Redirect to merci.html -->
+      <input type="hidden" name="_next" value="https://flairefragrance.com/merci.html" />
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit" style="margin-top: 1.5em; background: #28a745; color: white; font-size: 1.2em; padding: 1em; width: 100%; border: none; border-radius: 10px; cursor: pointer;">
+        ⬅️ إضغط هنا لطلب المنتج
+      </button>
+    </form>
+  </div>
 </section>
 
-<form action="https://getform.io/f/YOUR-FORM-ENDPOINT" method="POST">
-  <input type="text" name="name" placeholder="الاسم الكامل" required />
-  <input type="text" name="phone" placeholder="رقم الهاتف" required />
-  <input type="text" name="city" placeholder="المدينة" required />
-  <input type="text" name="address" placeholder="العنوان" required />
-  <input type="text" name="product" placeholder="العطور المطلوبة" required />
-  <input type="hidden" name="_redirect" value="https://flairefragrance.com/merci.html" />
-  <button type="submit">اطلب الآن</button>
-</form>
-
-</section>
 
 
 
