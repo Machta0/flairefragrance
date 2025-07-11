@@ -1,277 +1,121 @@
-
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flaire Fragrance</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>عطر FLAIRE FRAGRANCE</title>
   <style>
     body {
+      font-family: 'Arial', sans-serif;
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
+      padding: 0;
+      background: #fff;
       color: #333;
-      background: #fdfdfd;
-      scroll-behavior: smooth;
+      direction: rtl;
     }
-    header {
-      background: linear-gradient(135deg, #5a2a83, #a06cd5);
-      color: white;
-      padding: 2.5em 1em;
-      text-align: center;
-      animation: fadeIn 1.5s ease-in;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      font-family: 'Playfair Display', serif;
-    }
-    header p {
-      margin-top: 0.5em;
-      font-size: 1.2em;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2em;
-      padding: 1em 0;
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      font-weight: bold;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      color: #5a2a83;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #a06cd5;
-    }
-
-    .hero {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 350px;
-      background: url('https://via.placeholder.com/1200x350') center/cover no-repeat;
-      position: relative;
-    }
-    .hero h2 {
-      background: rgba(255,255,255,0.85);
-      padding: 1em 2em;
-      font-size: 2.5em;
-      color: #5a2a83;
-      font-family: 'Playfair Display', serif;
-      animation: slideIn 1.2s ease-in-out;
-    }
-
-    section {
+    header, section, footer {
       padding: 2em 1em;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h2.section-title {
-      font-size: 2em;
-      color: #5a2a83;
       text-align: center;
-      margin-bottom: 1em;
-      font-family: 'Playfair Display', serif;
     }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5em;
-      animation: fadeInUp 1s ease-in-out;
+    h1, h2 {
+      margin: 0.5em 0;
     }
-
-    .card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
+    .hero {
+      background: #000;
+      color: white;
+      padding: 1em;
     }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    .hero img {
+      max-width: 100%;
+      height: auto;
     }
-    .card img {
-      width: 100%;
-      display: block;
-    }
-    .card h3 {
+    .cta-button {
+      background: #00c03f;
+      color: white;
       font-size: 1.2em;
-      margin: 0.8em 0 0.3em;
-    }
-    .card p {
-      color: #777;
-      margin-bottom: 1em;
-      padding: 0 1em;
-    }
-
-    form {
-      background: #fff;
-      padding: 2em;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      max-width: 600px;
+      font-weight: bold;
+      text-align: center;
+      padding: 1em;
       margin: 2em auto;
+      display: block;
+      max-width: 90%;
+      border-radius: 8px;
+      text-decoration: none;
     }
-    form h2 {
-      margin-top: 0;
-      color: #5a2a83;
-      font-family: 'Playfair Display', serif;
+    .two-cols {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
     }
-    form input, form textarea, form select, form button {
+    .two-cols img {
       width: 100%;
-      padding: 12px;
+      max-width: 350px;
+      border-radius: 10px;
+    }
+    .order-form {
+      background: #f5f5f5;
+      padding: 2em;
+      max-width: 400px;
+      margin: 2em auto;
+      border-radius: 10px;
+    }
+    .order-form input, .order-form select {
+      width: 100%;
+      padding: 0.8em;
       margin-bottom: 1em;
       border-radius: 6px;
       border: 1px solid #ccc;
       font-size: 1em;
     }
-    form button {
-      background: #5a2a83;
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    form button:hover {
-      background: #a06cd5;
-    }
-
-    .rtl {
-      direction: rtl;
-      text-align: right;
-    }
-
-    .contact, .badges, .footer {
-      text-align: center;
-      padding: 1.5em 1em;
-      background: #fff;
-    }
-    .contact a {
-      color: #5a2a83;
-      text-decoration: none;
-    }
-    .badges img {
-      height: 50px;
-      margin: 0 1em;
-    }
-    .footer {
+    footer {
+      background: #eee;
       font-size: 0.9em;
-      color: #999;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;} to {opacity: 1;}
-    }
-    @keyframes slideIn {
-      from {transform: translateY(40px); opacity: 0;} to {transform: translateY(0); opacity: 1;}
-    }
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(30px);} to {opacity: 1; transform: translateY(0);}
+      color: #666;
     }
   </style>
 </head>
 <body>
 
-<div style="background:#e63946;color:white;text-align:center;padding:0.5em;font-weight:bold;font-size:1.1em;font-family:'Open Sans', sans-serif;">
-  ‏تخفيض 50% والتوصيل مجاني وسريع
-</div>
-<header>
-  <h1>Flaire Fragrance</h1>
-  <p>Découvrez nos parfums raffinés / اكتشف عطورنا الفاخرة</p>
+<header class="hero">
+  <h1>FLAIRE FRAGRANCE</h1>
+  <p>عطر يجسد شخصيتك</p>
+  <img src="https://i.imgur.com/k3goxwK.jpg" alt="Hero perfume image" />
 </header>
 
-<nav>
-  <a href="#produits">Produits</a>
-  <a href="#catalogue">Catalogue</a>
-  <a href="#galerie">Galerie</a>
-  <a href="#commander">Commander</a>
-</nav>
-
-<div class="hero">
-  <h2>Élégance & Authenticité</h2>
-</div>
-
-<section id="produits">
-  <h2 class="section-title">Nos Parfums</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://via.placeholder.com/300x300" alt="Élégance Absolue">
-      <h3>Élégance Absolue</h3>
-      <p>300 DH</p>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x300" alt="Bois de Luxe">
-      <h3>Bois de Luxe</h3>
-      <p>350 DH</p>
-    </div>
-  </div>
+<section>
+  <h2>لماذا تختار عطر FLAIRE FRAGRANCE؟</h2>
+  <p>مصنوع من أفضل المكونات - يدوم طويلاً - تصميم أنيق - مناسب للرجال والنساء</p>
 </section>
 
-<section id="catalogue">
-  <h2 class="section-title">Catalogue</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://via.placeholder.com/300x300" alt="Collection Intense">
-      <h3>Collection Intense</h3>
-      <p>Fragrance longue durée avec une touche orientale.</p>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x300" alt="Fraîcheur Florale">
-      <h3>Fraîcheur Florale</h3>
-      <p>Parfum frais et doux, idéal pour l'été.</p>
-    </div>
-  </div>
+<section class="two-cols">
+  <img src="https://i.imgur.com/MrAFjql.jpg" alt="Parfum Men, Women" />
+  
 </section>
 
-<section id="galerie">
-  <h2 class="section-title">Galerie</h2>
-  <div class="grid">
-    <div class="card"><img src="https://via.placeholder.com/400x400" alt="Boutique"></div>
-    <div class="card"><img src="https://via.placeholder.com/400x400" alt="Flacons"></div>
-  </div>
+<section>
+  <h2>عرض خاص</h2>
+  <p>احصل على 3 عطور بسعر 199 درهم فقط + توصيل مجاني</p>
+  <a class="cta-button" href="https://wa.me/212621150185?text=أرغب%20في%20طلب%203%20عطور%20FLAIRE%20FRAGRANCE%20الآن">اطلب الآن عبر واتساب</a>
 </section>
 
-<section id="commander">
-  <form action="https://formsubmit.co/flairandinfo@gmail.com" method="POST">
-    <h2>Commander votre parfum / طلب عطرك</h2>
-    <input type="text" name="Nom" placeholder="Nom complet / الاسم الكامل" required>
-    <input type="text" name="Téléphone" placeholder="Numéro de téléphone / رقم الهاتف" required class="rtl">
-    <textarea name="Adresse" placeholder="Adresse de livraison / عنوان التوصيل" rows="3" class="rtl" required></textarea>
-    <select name="Produit sélectionné" required>
-      <option value="">-- Sélectionnez un parfum / اختر عطراً --</option>
-      <option value="Élégance Absolue">Élégance Absolue - 300 DH</option>
-      <option value="Bois de Luxe">Bois de Luxe - 350 DH</option>
-    </select>
+<section class="order-form">
+  <h2>أو اطلب عبر النموذج</h2>
+  <form action="https://formsubmit.co/your@email.com" method="POST">
+    <input type="text" name="name" placeholder="الاسم الكامل" required />
+    <input type="tel" name="phone" placeholder="رقم الهاتف" required />
+    <input type="text" name="address" placeholder="العنوان الكامل" required />
+    <textarea name="product_choice" rows="3" placeholder="اكتب أسماء العطور التي تريدها" required></textarea>
     <input type="hidden" name="_captcha" value="false">
-    <button type="submit">Envoyer la commande / إرسال الطلب</button>
+    <input type="hidden" name="_next" value="https://flairefragrance.com/merci.html">
+    <button type="submit" class="cta-button">تأكيد الطلب</button>
   </form>
 </section>
 
-<div class="contact">
-  <p>📞 <a href="tel:+212621150185">+212 621 150 185</a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/212621150185" target="_blank">WhatsApp</a></p>
-</div>
 
-<div class="badges">
-  <img src="https://via.placeholder.com/120x50?text=100%+Satisfaction" alt="Satisfaction">
-  <img src="https://via.placeholder.com/120x50?text=Paiement+Sécurisé" alt="Paiement Sécurisé">
-  <img src="https://via.placeholder.com/120x50?text=Livraison+Express" alt="Livraison Express">
-</div>
-
-<div class="footer">
-  © 2025 Flaire Fragrance. Tous droits réservés.
-</div>
+<footer>
+  <p>© 2025 FLAIRE FRAGRANCE - جميع الحقوق محفوظة</p>
+</footer>
 
 </body>
 </html>
