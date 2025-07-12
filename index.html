@@ -13,7 +13,7 @@
       color: #222;
       scroll-behavior: smooth;
     }
- 
+
     .sub-banner {
       background: #000;
       color: #fff;
@@ -22,44 +22,45 @@
       padding: 1em;
       text-align: center;
       border-radius: 8px;
-      animation: blinkText 1,5s infinite;
+      animation: blinkText 1.5s infinite;
     }
 
     @keyframes blinkText {
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
     }
-.call-to-order {
-  border: 2px solid #2196f3;
-  border-radius: 40px;
-  padding: 1em;
-  max-width: 90%;
-  margin: 2em auto 1em;
-  text-align: center;
-  font-size: 1.3em;
-  color: #2196f3;
-  font-weight: bold;
-}
 
-.trust-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2em;
-  text-align: center;
-  padding: 2em 1em;
-  background: #fefefe;
-}
+    .call-to-order {
+      border: 2px solid #2196f3;
+      border-radius: 40px;
+      padding: 1em;
+      max-width: 90%;
+      margin: 2em auto 1em;
+      text-align: center;
+      font-size: 1.3em;
+      color: #2196f3;
+      font-weight: bold;
+    }
 
-.icon-block {
-  max-width: 150px;
-}
+    .trust-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      text-align: center;
+      padding: 2em 1em;
+      background: #fefefe;
+    }
 
-.icon-block img {
-  width: 60px;
-  height: auto;
-  margin-bottom: 0.5em;
-}
+    .icon-block {
+      max-width: 150px;
+    }
+
+    .icon-block img {
+      width: 60px;
+      height: auto;
+      margin-bottom: 0.5em;
+    }
 
     header {
       background: #111;
@@ -139,21 +140,38 @@
       outline: none;
     }
 
-    .order-form button {
+    .order-form label {
+      display: block;
+      text-align: right;
+      font-weight: bold;
+      margin-top: 0.8em;
+      color: #333;
+    }
+
+    .hover-glow-btn {
       background: #28a745;
-      color: #fff;
+      color: white;
       font-size: 1.3em;
       padding: 1em;
       width: 100%;
       border: none;
       border-radius: 12px;
       cursor: pointer;
-      transition: background 0.9s ease;
       font-weight: bold;
+      margin-top: 1.5em;
+      animation: glowPulse 2s infinite ease-in-out;
+      transition: background 0.3s ease;
     }
 
-    .order-form button:hover {
-      background: #218838;
+    @keyframes glowPulse {
+      0%, 100% {
+        box-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
+        background-color: #28a745;
+      }
+      50% {
+        box-shadow: 0 0 25px rgba(40, 167, 69, 1);
+        background-color: #34d058;
+      }
     }
 
     footer {
@@ -204,9 +222,7 @@
 </head>
 <body>
 
-<div class="sub-banner">
-  تخفيض 50% و التوصيل مجاني و سريع
-</div>
+<div class="sub-banner">تخفيض 50% و التوصيل مجاني و سريع</div>
 
 <header>
   <h1>FLAIRE FRAGRANCE</h1>
@@ -217,53 +233,39 @@
 </header>
 
 <section>
-  <h2> FLAIRE Fragranceلما تختار عطر </h2>
-  <p><p>
-  عطور FLAIRE FRAGRANCE تتميز بتركيبة قوية ومركزة بقاعدة طبيعية ، تم تطويرها بعناية لتمنحك ثباتاً يدوم لساعات طويلة. 
-  كل عطر يعكس أناقة العلامة وذوقها الرفيع، بتصميم فاخر مناسب للرجال والنساء، يجمع بين البساطة والرقي في آنٍ واحد.
-</p>
-</p>
+  <h2> FLAIRE Fragrance لماذا تختار عطر</h2>
+  <p>
+    عطور FLAIRE FRAGRANCE تتميز بتركيبة قوية ومركزة بقاعدة طبيعية، تم تطويرها بعناية لتمنحك ثباتاً يدوم لساعات طويلة.<br>
+    كل عطر يعكس أناقة العلامة وذوقها الرفيع، بتصميم فاخر مناسب للرجال والنساء، يجمع بين البساطة والرقي في آنٍ واحد.
+  </p>
+</section>
+
 <section class="two-cols">
   <img src="Yellow White Gray Modern Perfume For Men Promotion Flyer.svg" alt="منتج 1">
- 
+  <img src="Beige Neutral Minimalist Sale Fashion Facebook Cover.gif" alt="منتج 2">
 </section>
 
-<section class="two-cols">
-  <img src="Beige Neutral Minimalist Sale Fashion Facebook Cover.gif" alt=" 1">
-  
+<section>
+  <h2>اختار عطرك</h2>
 </section>
 
-  <section>
-  <h2> اختار عطرك </h2>
-  
-
-</section>
-
-</section>
 <section class="two-cols">
   <img src="Flaire 2/1.svg" alt="منتج 1">
   <img src="Flaire 2/2.svg" alt="منتج 2">
-  <img src="Flaire 2/3.svg=" alt="منتج 2">
-  <img src="Flaire 2/4.svg" alt="منتج 2">
- 
+  <img src="Flaire 2/3.svg" alt="منتج 3">
+  <img src="Flaire 2/4.svg" alt="منتج 4">
 </section>
 
- <div class="call-to-order">
+<div class="call-to-order">
   <p>لطلب المرجو ملأ الإستمارة اسفله</p>
 </div>
 
-
-<section class="order-form" id="order-form">
-
-
 <section class="order-form" id="order-form">
   <h2>عرض خاص ! <br><span style="font-size: 0.8em; color: #555;">Offre Spéciale !</span></h2>
-
   <p style="font-size: 1.2em; color: green;">
     +2 عطور <span style="color: #2196f3;">الثالث مجاناً</span><br>
     <span style="font-size: 0.9em; color: #2196f3;">+2 Parfums <span style="color: green;">le 3ème offert</span></span>
   </p>
-
   <h1 style="color: #28a745; font-size: 2.5em;">199 د.م</h1>
   <p style="font-size: 1em; color: #888;">Seulement 199 MAD</p>
 
@@ -296,49 +298,6 @@
   </form>
 </section>
 
-<style>
-  .order-form label {
-    display: block;
-    text-align: right;
-    font-weight: bold;
-    margin-top: 0.8em;
-    color: #333;
-  }
-
-  .hover-glow-btn {
-    background: #28a745;
-    color: white;
-    font-size: 1.3em;
-    padding: 1em;
-    width: 100%;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 1.5em;
-    animation: glowPulse 2s infinite ease-in-out;
-    transition: background 0.3s ease;
-  }
-
-  @keyframes glowPulse {
-    0%, 100% {
-      box-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
-      background-color: #28a745;
-    }
-    50% {
-      box-shadow: 0 0 25px rgba(40, 167, 69, 1);
-      background-color: #34d058;
-    }
-  }
-</style>
-
-    <input type="hidden" name="_next" value="https://flairefragrance.com/merci.html">
-    <input type="hidden" name="_captcha" value="false">
-
-    <button type="submit">  إضغط هنا لطلب المنتج</button>
-  </form>
-</section>
-
 <a href="#order-form" class="floating-cta" id="floatingCTA">إشتري الآن ب 199 درهم فقط</a>
 
 <section class="trust-icons">
@@ -356,7 +315,6 @@
   </div>
 </section>
 
-  
 <footer>
   <p>© 2025 FLAIRE FRAGRANCE - جميع الحقوق محفوظة</p>
 </footer>
