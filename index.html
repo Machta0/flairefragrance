@@ -256,20 +256,81 @@
 <section class="order-form" id="order-form">
 
 
-  <h2>عرض خاص!</h2>
+<section class="order-form" id="order-form">
+  <h2>عرض خاص ! <br><span style="font-size: 0.8em; color: #555;">Offre Spéciale !</span></h2>
+
   <p style="font-size: 1.2em; color: green;">
-    +2 عطور <span style="color: #2196f3;">الثالث مجاناً</span>
+    +2 عطور <span style="color: #2196f3;">الثالث مجاناً</span><br>
+    <span style="font-size: 0.9em; color: #2196f3;">+2 Parfums <span style="color: green;">le 3ème offert</span></span>
   </p>
+
   <h1 style="color: #28a745; font-size: 2.5em;">199 د.م</h1>
+  <p style="font-size: 1em; color: #888;">Seulement 199 MAD</p>
 
   <form action="https://getform.io/f/bejlxwma" method="POST">
-    <input type="text" name="العطر الأول" placeholder="العطر الأول" required>
-    <input type="text" name="العطر الثاني" placeholder="العطر الثاني" required>
-    <input type="text" name="العطر الثالث" placeholder="العطر الثالث" required>
-    <input type="text" name="الاسم الكامل" placeholder="الاسم الكامل" required>
-    <input type="text" name="رقم الهاتف" placeholder="رقم الهاتف" required>
-    <input type="text" name="المدينة" placeholder="المدينة" required>
-    <input type="text" name="العنوان الكامل" placeholder="العنوان الكامل" required>
+    <label>العطر الأول / Premier parfum</label>
+    <input type="text" name="العطر الأول" required>
+
+    <label>العطر الثاني / Deuxième parfum</label>
+    <input type="text" name="العطر الثاني" required>
+
+    <label>العطر الثالث / Troisième parfum</label>
+    <input type="text" name="العطر الثالث" required>
+
+    <label>الاسم الكامل / Nom complet</label>
+    <input type="text" name="الاسم الكامل" required>
+
+    <label>رقم الهاتف / Téléphone</label>
+    <input type="text" name="رقم الهاتف" required>
+
+    <label>المدينة / Ville</label>
+    <input type="text" name="المدينة" required>
+
+    <label>العنوان الكامل / Adresse complète</label>
+    <input type="text" name="العنوان الكامل" required>
+
+    <input type="hidden" name="_next" value="https://flairefragrance.com/merci.html">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit" class="hover-glow-btn">⬅️ إضغط هنا لطلب المنتج / Cliquez ici pour commander</button>
+  </form>
+</section>
+
+<style>
+  .order-form label {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 0.8em;
+    color: #333;
+  }
+
+  .hover-glow-btn {
+    background: #28a745;
+    color: white;
+    font-size: 1.3em;
+    padding: 1em;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1.5em;
+    animation: glowPulse 2s infinite ease-in-out;
+    transition: background 0.3s ease;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
+      background-color: #28a745;
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(40, 167, 69, 1);
+      background-color: #34d058;
+    }
+  }
+</style>
 
     <input type="hidden" name="_next" value="https://flairefragrance.com/merci.html">
     <input type="hidden" name="_captcha" value="false">
